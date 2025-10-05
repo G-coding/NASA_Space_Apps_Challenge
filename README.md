@@ -78,7 +78,8 @@ Add user-uploaded layer support
 Implement actual search/autocomplete functionality
 
 # 👩‍💻 Author
-
+```bash
 Team: Ctrl+Alt+Delete
 Project: NASA Image Explorer
 Made with ❤️ using LeafletJS
+```
