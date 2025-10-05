@@ -19,77 +19,18 @@ This project demonstrates how to explore and compare large-scale image or map da
 # 🧩 Tech Stack
 Component	Technology Used
 Frontend	HTML, CSS, JavaScript
-Mapping Library	LeafletJS
+Mapping Library	LeafletJS,
 
 Comparison Plugin	Leaflet Image Comparison
 
 Map Tiles (Demo)	OpenStreetMap, Stamen Design
-# 🛠️ Setup Guide
-1️⃣ Folder Structure
+
+# 1️⃣ Folder Structure
 ```bash
 NASA_Explorer/
 ├── index.html
 ├── style.css
 └── script.js
-```
-
-2️⃣ index.html
-```bash
-<!DOCTYPE html>
-<html>
-<head>
-    <title>NASA Image Explorer</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <div id="mapid"></div>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet-image-comparison@0.3.0/dist/leaflet-image-comparison.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
-```
-
-3️⃣ style.css
-```bash
-#mapid {
-    height: 100vh;
-    width: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-```
-
-4️⃣ script.js
-```bash
-// Initialize the map and set center
-var mymap = L.map('mapid').setView([20, 0], 2);
-
-// Layer 1: Base map
-var layer1 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© OpenStreetMap contributors'
-}).addTo(mymap);
-
-// Layer 2: Comparison layer (e.g., old image or heat map)
-var layer2 = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.png', {
-    attribution: 'Map tiles by Stamen Design'
-});
-
-// Add comparison control
-var compare = L.control.compare(layer1, layer2).addTo(mymap);
-
-// Example marker (feature labeling)
-L.marker([28.6, 77.2]).addTo(mymap)
-  .bindPopup("<b>Known Feature:</b> High Population Density Area");
-
-// Example search mockup
-// mymap.setView([newLat, newLng], 5); // Conceptual for AI-like location search
 ```
 
 # 🧠 How It Works
