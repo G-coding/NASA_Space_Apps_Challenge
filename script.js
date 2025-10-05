@@ -24,7 +24,14 @@ var watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercol
 });
 
 // Add default base layer
-dark.addTo(mymap);
+light.addTo(mymap);
+
+// Define the GIBS layer
+var gibsLayer = new L.GIBSLayer('MODIS_Aqua_SurfaceReflectance_Bands721', {
+    date: new Date('2025/10/05'),
+    transparent: true,
+    opacity: 1
+}).addTo(mymap);
 
 // --- Glowing Marker Icon ---
 var glowingIcon = L.divIcon({
@@ -44,19 +51,17 @@ mymap.flyTo([28.6, 77.2], 4, {
     duration: 3
 });
 
-// --- Add Layer Switcher Control ---
-var baseMaps = {
+// --- Add Layer Switcher Control with NASA GIBS ---
+var baseLayers = {
     "Light": light,
     "Dark": dark,
     "Watercolor": watercolor
 };
 
-L.control.layers(baseMaps).addTo(mymap);
+// Overlays (optional layers)
+var overlays = {
+    "NASA GIBS Imagery": gibsLayer
+};
 
-// --- Optional Second Layer for Comparison (if needed) ---
-// Example only: can be used with L.control.sideBySide or compare plugin
-/*
-var layer2 = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.png', {
-    attribution: 'Layer 2 by Stamen Design'
-});
-*/
+// Add layer control to the map
+L.control.layers(baseLayers, overlays).addTo(mymap);
