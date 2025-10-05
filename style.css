@@ -1,0 +1,50 @@
+/* Make the map fill the screen beautifully */
+#mapid {
+    height: 100vh;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 200, 255, 0.25);
+    background-color: #0d1117;
+}
+
+/* Smooth animated gradient background for body */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d1117, #001f3f);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Leaflet popups styled to match dark mode */
+.leaflet-popup-content-wrapper {
+    background-color: #121826;
+    color: #e6f1ff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.2);
+}
+
+.leaflet-popup-tip {
+    background-color: #121826;
+}
+
+/* Layer control dark theme */
+.leaflet-control-layers {
+    background: rgba(20, 25, 40, 0.9);
+    color: #00d1ff;
+    border-radius: 10px;
+    padding: 6px 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+}
