@@ -1,8 +1,8 @@
 # 🌍 NASA Image Explorer
 
-A Web App to Compare Massive Satellite Images Using LeafletJS
+A Web App to Explore and Compare Massive Satellite Images Using LeafletJS and NASA GIBS
 
-This project demonstrates how to explore and compare large-scale image or map data efficiently using LeafletJS. It allows users to compare two different map layers (for example, satellite images from different years or datasets like heat maps) with a simple drag-to-compare interface.
+This project demonstrates how to explore and compare large-scale satellite imagery efficiently. It allows users to view multiple map layers (e.g., real satellite images, heat maps, or artistic tiles) with a drag-to-compare swipe interface and real-world NASA Earth imagery overlays.
 
 # 🚀 Features
 
@@ -10,21 +10,22 @@ This project demonstrates how to explore and compare large-scale image or map da
 
 🪞 Side-by-side image comparison (swipe feature)
 
-📍 Feature labeling using map markers
+📍 Feature labeling using glowing map markers
 
 🔍 Mock search functionality for locations
+
+🌐 Real satellite imagery overlay using NASA GIBS API
 
 ⚡ Optimized tile-based loading for large datasets
 
 # 🧩 Tech Stack
-Component	Technology Used
-Frontend	HTML, CSS, JavaScript
-Mapping Library	LeafletJS,
-
-Comparison Plugin	Leaflet Image Comparison
-
-Map Tiles (Demo)	OpenStreetMap, Stamen Design
-
+```bash
+Component	Technology Used: Frontend - HTML, CSS, JavaScript
+Mapping Library: LeafletJS
+Comparison Plugin: Leaflet Image Comparison
+Satellite Data:	NASA GIBS API (MODIS, VIIRS layers)
+Map Tiles (Demo): OpenStreetMap, Stamen Design
+```
 # 1️⃣ Folder Structure
 ```bash
 NASA_Explorer/
@@ -35,51 +36,60 @@ NASA_Explorer/
 
 # 🧠 How It Works
 
-The app uses Leaflet’s tile layer system, meaning only small map tiles visible on the screen are loaded — not the full dataset.
-→ This ensures high performance even for terabytes of imagery.
+Uses Leaflet’s tile layer system so only visible map tiles are loaded, ensuring smooth performance even with massive datasets.
 
-The comparison control (swipe tool) lets users visually compare two layers — for example, “Amazon Forest in 2000 vs 2020.”
+NASA GIBS API overlays provide authentic, high-resolution satellite imagery for Earth.
 
-Markers and popups provide feature labeling for known locations.
+Swipe tool lets users visually compare two layers (e.g., different years or datasets).
 
-A mock search demonstrates the concept of “AI-powered navigation.”
+Glowing markers allow feature labeling on the map.
+
+Mock search demonstrates the concept of location-based navigation.
 
 # 📊 Example Use Cases
 
-Comparing satellite imagery across different years
+Comparing satellite imagery across different years or datasets
 
-Visualizing climate change or deforestation
+Visualizing climate change, deforestation, or urban growth
 
-Overlaying heat maps or pollution data
+Overlaying heat maps, pollution data, or other spatial datasets
 
-Educational museum or science exhibits
+Educational museum or science exhibits using real NASA imagery
 
 # 🧾 Documentation Notes
-🧱 Adaptive Storage
 
-The project uses tiled map layers — only visible map tiles are fetched, making the application fast and lightweight.
+🧱 Adaptive Storage: Only visible map tiles are fetched, making the app fast and lightweight.
 
-🪄 Comparison Method
+🪄 Comparison Method: Drag-to-compare efficiently shows differences between datasets or timeframes.
 
-The drag-to-compare (swipe) control efficiently shows two datasets for the same region, allowing users to explore temporal or dataset-based differences.
+🏛️ Example Scenario: Users can slide between layers—like a thermal map vs. visual map—to explore changes over time using real NASA satellite imagery.
 
-🏛️ Example Scenario
+# 🌐 NASA Resources
 
-“Using NASA’s imagery, users can slide between two layers — such as a thermal map and a visual map — to explore changes over time, just like a museum exhibit.”
+NASA Global Imagery Browse Services (GIBS): Provides high-resolution satellite imagery as an overlay on the map.
+Link Text: NASA GIBS API
+
+Usage:
+
+Display authentic Earth imagery
+
+Enhance the visual experience for users
+
+Supports temporal comparison across dates for future features
 
 # 💡 Future Enhancements
 
-Integrate NASA or Sentinel satellite APIs for real data
+Add AI-based image recognition for automatic feature tagging
 
-Add AI-based image recognition for feature tagging
+Support user-uploaded layers for custom datasets
 
-Add user-uploaded layer support
+Implement real-time search/autocomplete functionality
 
-Implement actual search/autocomplete functionality
+Integrate additional NASA or Sentinel datasets
 
 # 👩‍💻 Author
 ```bash
 Team: Ctrl+Alt+Delete
 Project: NASA Image Explorer
-Made with ❤️ using LeafletJS
+Made with ❤️ using LeafletJS and NASA GIBS
 ```
